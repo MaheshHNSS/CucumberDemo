@@ -1,5 +1,7 @@
+/*
 package steps;
 
+import actions.Common_Actions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,7 +13,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.fail;
 
 public class loginSteps {
-    WebDriver driver = new ChromeDriver();
+
+
 
     @Given("user is on login page")
     public void user_is_on_login_page() {
@@ -50,3 +53,4 @@ public class loginSteps {
       fail("Message is not displayed");
     }
 }
+*/

@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue = {"steps"},
         dryRun = false,
        // name = "Login", //scenario name has this text
-        tags = "@login",
+        tags = "@banklogin",
         plugin = {"pretty","html:MyTestReport.html"}
 )
 public class TestRunner {
