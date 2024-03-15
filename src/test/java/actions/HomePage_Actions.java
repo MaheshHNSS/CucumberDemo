@@ -3,6 +3,7 @@ package actions;
 import elements.HomePage_Elements;
 import elements.Login_Elements;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import steps.Common_Steps;
 
@@ -23,5 +24,15 @@ public class HomePage_Actions {
         Thread.sleep(5000);
         Assert.assertTrue("Manager link is not visible after login",homePageElements.managerHyperLInk.isDisplayed());
 
+    }
+
+    public void clickLink(String linkName) {
+        driver.findElement(By.xpath("//a[.='"+linkName+"']")).click();
+    }
+
+    public void verifyUrl(String expectedUrl) throws InterruptedException {
+        Thread.sleep(5000);
+        //driver.findElement(By.id("dismiss-button")).click();
+        Assert.assertEquals(driver.getCurrentUrl(),expectedUrl);
     }
 }

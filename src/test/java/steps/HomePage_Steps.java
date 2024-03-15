@@ -3,7 +3,9 @@ package steps;
 import actions.Common_Actions;
 import actions.HomePage_Actions;
 import actions.Login_Actions;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class HomePage_Steps {
     Common_Actions common_actions;
@@ -24,4 +26,14 @@ public class HomePage_Steps {
     public void heIsOnHomePage() throws InterruptedException {
         homePageActions.verifyUserisOnHomePageBanking();
     }
+
+    @When("click on {string}")
+    public void click_on(String linkName) {
+        homePageActions.clickLink(linkName);
+    }
+    @Then("verify {string}")
+    public void verify(String expectedUrl) throws InterruptedException {
+        homePageActions.verifyUrl(expectedUrl);
+    }
+
 }

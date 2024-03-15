@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
         features = {"features"},
         glue = {"steps"},
         dryRun = false,
-       // name = "Login", //scenario name has this text
-        tags = "@banklogin",
+      //  name = "login", //scenario name has this text
+        tags = "@demo_scenariooutline",
         plugin = {"pretty","html:MyTestReport.html"}
 )
 public class TestRunner {
